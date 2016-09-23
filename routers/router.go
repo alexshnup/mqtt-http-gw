@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"gitlab.com/gosparom/mgtt-http-gw/controllers"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/controllers"
 
 	"github.com/astaxie/beego"
 )

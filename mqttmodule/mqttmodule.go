@@ -9,9 +9,9 @@ import
 	"os/signal"
 	"syscall"
 
-	"gitlab.com/gosparom/mgtt-http-gw/mqttmodule/conf"
-	"gitlab.com/gosparom/mgtt-http-gw/mqttmodule/service"
-	"gitlab.com/gosparom/mgtt-http-gw/mqttmodule/wirenboard"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/conf"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/service"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/wirenboard"
 )
 
 // checkError check error

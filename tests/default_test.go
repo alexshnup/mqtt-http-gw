@@ -6,7 +6,7 @@ import (
 	"testing"
 	"runtime"
 	"path/filepath"
-	_ "gitlab.com/gosparom/mgtt-http-gw/routers"
+	_ "github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/routers"
 
 	"github.com/astaxie/beego"
 	. "github.com/smartystreets/goconvey/convey"

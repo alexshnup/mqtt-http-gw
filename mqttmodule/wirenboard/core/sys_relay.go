@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	mqtt "github.com/alexshnup/mqtt"
-	"gitlab.com/gosparom/mgtt-http-gw/models"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/models"
 )
 
 /*

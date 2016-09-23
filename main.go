@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gitlab.com/gosparom/mgtt-http-gw/mqttmodule"
-	_ "gitlab.com/gosparom/mgtt-http-gw/routers"
+	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule"
+	_ "github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/routers"
 
 	"github.com/astaxie/beego"
 )
