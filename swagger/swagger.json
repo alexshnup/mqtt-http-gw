@@ -1,0 +1,195 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Url http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/barrier/": {
+            "get": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "get all barriers",
+                "operationId": "BarrierController.GetAll",
+                "responses": {
+                    "200": {
+                        "description": "{barrier} models.Barrier"
+                    },
+                    "403": {
+                        "description": ":barrierId is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "create barrier",
+                "operationId": "BarrierController.Create",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The barrier content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Barrier"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} models.Barrier.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/barrier/cmd": {
+            "post": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "create barrier",
+                "operationId": "BarrierController.Cmd",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The barrier content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Barrier"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} models.Barrier.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/barrier/{barrierId}": {
+            "get": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "find barrier by barrierid",
+                "operationId": "BarrierController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "barrierId",
+                        "description": "the barrierid you want to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{barrier} models.Barrier"
+                    },
+                    "403": {
+                        "description": ":barrierId is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "update the barrier",
+                "operationId": "BarrierController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "barrierId",
+                        "description": "The barrierid you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Barrier"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{barrier} models.Barrier"
+                    },
+                    "403": {
+                        "description": ":barrierId is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "delete the barrier",
+                "operationId": "BarrierController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "barrierId",
+                        "description": "The barrierId you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "barrierId is empty"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Barrier": {
+            "title": "Barrier",
+            "type": "object",
+            "properties": {
+                "BarrierId": {
+                    "type": "string"
+                },
+                "Payload": {
+                    "type": "string"
+                },
+                "Timestamp": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "barrier",
+            "description": "Operations about barrier\n"
+        }
+    ]
+}

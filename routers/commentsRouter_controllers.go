@@ -1,0 +1,51 @@
+package routers
+
+import (
+	"github.com/astaxie/beego"
+)
+
+func init() {
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "Post",
+			Router: `/`,
+			AllowHTTPMethods: []string{"post"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "PostCmd",
+			Router: `/cmd`,
+			AllowHTTPMethods: []string{"post"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "Get",
+			Router: `/:barrierId`,
+			AllowHTTPMethods: []string{"get"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "GetAll",
+			Router: `/`,
+			AllowHTTPMethods: []string{"get"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "Put",
+			Router: `/:barrierId`,
+			AllowHTTPMethods: []string{"put"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"] = append(beego.GlobalControllerRouter["gitlab.com/gosparom/mgtt-http-gw/controllers:BarrierController"],
+		beego.ControllerComments{
+			Method: "Delete",
+			Router: `/:barrierId`,
+			AllowHTTPMethods: []string{"delete"},
+			Params: nil})
+
+}
