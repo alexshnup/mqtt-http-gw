@@ -6,8 +6,8 @@ import (
 
 	mqtt "github.com/alexshnup/mqtt"
 
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/service"
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/service/meminfo"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/service"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/service/meminfo"
 )
 
 type memory struct {

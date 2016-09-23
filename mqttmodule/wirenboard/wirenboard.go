@@ -3,7 +3,7 @@ package wirenboard
 import (
 	mqtt "github.com/alexshnup/mqtt"
 
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/wirenboard/core"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/wirenboard/core"
 )
 
 // Wirenboard struct

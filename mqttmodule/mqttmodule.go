@@ -9,9 +9,9 @@ import
 	"os/signal"
 	"syscall"
 
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/conf"
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/service"
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/wirenboard"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/conf"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/service"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule/wirenboard"
 )
 
 // checkError check error

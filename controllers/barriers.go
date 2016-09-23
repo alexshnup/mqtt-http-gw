@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/models"
-	"github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule"
+	"github.com/alexshnup/mqtt-http-gw/models"
+	"github.com/alexshnup/mqtt-http-gw/mqttmodule"
 
-	_ "github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/conf"
-	_ "github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/service"
-	_ "github.com/alexshnup/mqtt-http-gw/mgtt-http-gw/mqttmodule/wirenboard"
+	_ "github.com/alexshnup/mqtt-http-gw/mqttmodule/conf"
+	_ "github.com/alexshnup/mqtt-http-gw/mqttmodule/service"
+	_ "github.com/alexshnup/mqtt-http-gw/mqttmodule/wirenboard"
 
 	"github.com/astaxie/beego"
 )
