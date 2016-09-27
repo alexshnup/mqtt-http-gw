@@ -85,6 +85,32 @@
                 }
             }
         },
+        "/barrier/get-status-adc/{barrierId}": {
+            "get": {
+                "tags": [
+                    "barrier"
+                ],
+                "description": "find barrier by barrierid",
+                "operationId": "BarrierController.GetStatusADC",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "barrierId",
+                        "description": "the barrierid you want to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{barrier} models.Barrier"
+                    },
+                    "403": {
+                        "description": ":barrierId is empty"
+                    }
+                }
+            }
+        },
         "/barrier/{barrierId}": {
             "get": {
                 "tags": [

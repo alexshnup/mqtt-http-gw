@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"strings"
+	"time"
 
 	"github.com/alexshnup/mqtt-http-gw/models"
 	"github.com/alexshnup/mqtt-http-gw/mqttmodule"
@@ -61,6 +62,32 @@ func (o *BarrierController) PostCmd() {
 func (o *BarrierController) Get() {
 	barrierId := o.Ctx.Input.Param(":barrierId")
 	if barrierId != "" {
+		ob, err := models.Get1(barrierId)
+		if err != nil {
+			o.Data["json"] = err.Error()
+		} else {
+			o.Data["json"] = ob
+		}
+	}
+	o.ServeJSON()
+}
+
+// @Title GetStatusADC
+// @Description find barrier by barrierid
+// @Param	barrierId		path 	string	true		"the barrierid you want to get"
+// @Success 200 {barrier} models.Barrier
+// @Failure 403 :barrierId is empty
+// @router /get-status-adc/:barrierId [get]
+func (o *BarrierController) GetStatus() {
+	barrierId := o.Ctx.Input.Param(":barrierId")
+	if barrierId != "" {
+		viaspases := strings.Replace(barrierId, "-", " ", -1)
+		sliceString := strings.Fields(viaspases)
+		topicEnd := sliceString[0] + "/" + sliceString[1] + "/adc"
+
+		mqttmodule.WB.System.Relay.PublishPayload(0, topicEnd, "")
+		time.Sleep(time.Millisecond * 200)
+
 		ob, err := models.Get1(barrierId)
 		if err != nil {
 			o.Data["json"] = err.Error()
